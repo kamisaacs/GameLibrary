@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="../static/css/site.css" th:href="@{/css/site.css}" rel="stylesheet">
+    <title>Publisher</title>
+</head>
+<body>
+    <h1>Game Publisher</h1>
+    <a th:ref="@{publisher/create}"> Create Publisher</a>
+    <table>
+        <tr th:each="publisher:${publishers}">
+            <td th:text = "${publisher.getId()}"></td>
+            <td th:text = "${publisher.getName()}"></td>
+            <td><a th:href="@{publisher/gameDetails/} + ${publisher.getId()}">Details</a></td>
+            <td><a th:href="@{publisher/EditPublisher/} + ${publisher.getId()}">Edit</a></td>
+            <td><a th:href="@{publisher/DeleteDetails/} + ${publisher.getId()}">Delete</a></td>
+    </table>
+</body>
+</html>
