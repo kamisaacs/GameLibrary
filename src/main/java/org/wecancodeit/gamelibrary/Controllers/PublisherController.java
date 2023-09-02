@@ -44,4 +44,11 @@ public class PublisherController {
         return "redirect:/publisher";
     }
 
+    @GetMapping({"/publisher/editPublishers"})
+    public String displayEditPub(Model model){
+        model.addAttribute("publishers", repository.findAll());
+        return "editPublishersView";
+        
+    }
+
 }

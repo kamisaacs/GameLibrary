@@ -115,4 +115,10 @@ public class BoardGameModel {
         return "BoardGameModel [id=" + id + ", name=" + name + "]";
     }
 
+    public void setName(String name2) {
+    }
+
+    public void setDescription(String description2) {
+    }
+
 }

@@ -84,5 +84,8 @@ public class PublisherModel {
         return "PublisherModel [id=" + id + ", name=" + name + "]";
     }
 
+    public void setName(String name2) {
+    }
+
 
 }
